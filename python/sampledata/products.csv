@@ -1,0 +1,9 @@
+product_id,product_name,price,quantity
+1,Laptop,999.99,5
+2,Smartphone,499.99,10
+3,Tablet,,0
+4,Headphones,149.99,25
+5,Charger,29.99,100
+6,Monitor,,20
+7,Keyboard,49.99,15
+8,Mouse,19.99,50

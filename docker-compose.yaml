@@ -1,0 +1,38 @@
+version: '3'
+services:
+  backend:
+    build: ./server
+    ports:
+      - "3001:3001"
+    networks:
+      - ldotr_network
+    environment:
+      MONGO_URI: mongodb+srv://hassan:khan@cluster0.9ssyr.mongodb.net/
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./client/simpleuserform
+    ports:
+      - "3000:3000"
+    networks:
+      - ldotr_network
+    environment:
+      REACT_APP_API_URL: http://backend:3001 
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - ldotr_network
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  mern_network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

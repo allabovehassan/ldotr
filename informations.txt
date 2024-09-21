@@ -1,0 +1,77 @@
+Containerization
+
+Advantages of Using Docker for Deploying a MERN Stack Application
+
+Using Docker to deploy a MERN stack application brings several significant advantages:
+
+Consistency Across Environments: Docker creates a standardized environment for your application. This means that whether you're developing locally, testing on staging, or deploying to production, your application runs the same way everywhere. It effectively eliminates the classic “it works on my machine” dilemma.
+
+Isolation of Services: Each part of your MERN stack—Node.js, Express, MongoDB, and React—can run in its own container. This separation allows for easy management and helps prevent conflicts between dependencies.
+
+Easy Scaling: Docker makes it simple to scale your application. If your application experiences a spike in traffic, you can easily run multiple instances of your Node.js server without hassle.
+
+Simplified Deployment Process: Packaging your application as a Docker image makes deployment straightforward. You can move your application between environments with ease, ensuring that everything from dependencies to configurations stays intact.
+
+Resource Efficiency: Compared to traditional virtual machines, Docker containers share the host OS kernel. This means they use less memory and CPU, which can lead to cost savings when deploying multiple instances.
+
+Real-World Use Case: Consider an e-commerce site built on the MERN stack. During the holiday season, traffic spikes dramatically. By using Docker, the development team can quickly scale the Node.js application to handle this increased load without impacting the MongoDB database or other services. This flexibility can be a game-changer in maintaining performance during peak times.
+
+----------------------------
+Inserting a New User into the Collection
+db.users.insertMany([
+    { "name": "sebastian", "email": "sebastian@example.com", "age": 30 },
+    { "name": "hanna", "email": "hanna@example.com", "age": 25 }
+]);
+
+
+------------------------------
+Basic Git Commands
+
+Initialize Your Git Repository: To start a new Git repository in your project folder, use:
+git init
+
+
+Add Your Files to Staging: Once you’ve made some changes and want to include them in your next commit, you can stage them with:
+git add .
+
+
+Commit Your Changes: Now that your files are staged, it’s time to save your work:
+git commit -m "Initial commit"
+
+
+
+Link to GitHub: To connect your local repository to a GitHub repository
+git remote add origin https://github.com/username/repository.git
+
+
+Push Your Code to GitHub: Finally, to upload your committed changes to GitHub
+git push -u origin main
+
+
+----------------------
+Branching Strategy
+It involves a few primary branches: main, develop, and feature branches. The main branch contains stable code, while the develop branch is where active development occurs.
+
+Create a Feature Branch: Start by branching off from develop for your new feature
+git checkout -b feature/your-feature-name
+
+
+Work on Your Feature: Make your changes and commit them as you go.
+
+Merge Back into Develop: Once your feature is complete, switch back to develop and merge your changes:
+git checkout develop
+git merge feature/your-feature-name
+
+--------------------------------------
+Merging and Resolving Conflicts
+
+
+Start the Merge: Attempt to merge your feature branch:
+git merge feature/your-feature-name
+
+git status
+
+git add <file>
+
+git commit -m "Resolved merge conflict"
+
