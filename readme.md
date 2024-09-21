@@ -80,9 +80,11 @@ link-https://www.postman.com/joint-operations-physicist-20201261/7c4a3e01-4842-4
 2. Navigate to the project directory.
 3. Install dependencies: 
 - Server
-   `cd server` 
+   `cd server`
+   `npm i`
    `npm start`
  
 - Client 
 `cd Client/simpleuserform`
+`npm i`
 `npm start` 
